@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FAFAFA; /* warm off-white */
+    --color-foreground: #1E293B; /* near-black with subtle warmth */
+    --color-card: #FFFFFF; /* pure white */
+    --color-card-foreground: #1E293B; /* near-black with subtle warmth */
+    --color-popover: #FFFFFF; /* pure white */
+    --color-popover-foreground: #1E293B; /* near-black with subtle warmth */
+    --color-muted: #F1F5F9; /* light gray */
+    --color-muted-foreground: #64748B; /* medium gray */
+    --color-border: #E2E8F0; /* light gray border */
+    --color-input: #FFFFFF; /* pure white */
+    --color-ring: #1E40AF; /* deep blue */
+
+    /* Brand Colors */
+    --color-primary: #1E40AF; /* deep blue */
+    --color-primary-foreground: #FFFFFF; /* white */
+    --color-secondary: #64748B; /* sophisticated slate */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    --color-accent: #0EA5E9; /* bright blue */
+    --color-accent-foreground: #FFFFFF; /* white */
+
+    /* Status Colors */
+    --color-success: #059669; /* professional green */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #D97706; /* amber orange */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #DC2626; /* clear red */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #DC2626; /* clear red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+
+    /* Text Colors */
+    --color-text-primary: #1E293B; /* near-black with subtle warmth */
+    --color-text-secondary: #64748B; /* medium gray */
+
+    /* Surface Colors */
+    --color-surface: #FFFFFF; /* pure white */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+
+  body, p, span, div {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .shadow-subtle {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-modal {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .transition-smooth {
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-medium {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
